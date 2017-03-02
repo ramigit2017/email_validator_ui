@@ -13,6 +13,14 @@ public class Validator{
 		if (email.matches("^[^@]*@[^@]*$")){
 			rule++;
 		}
+		//New rule: checks if email is at least 6 chars
+		if (email.length()>=6){
+			rule = true;
+				}
+		//New rule: checks if email is 20 chars long or less
+		if (email.length()<=20){
+			rule = true;
+				}
 		return rule;
 	}
 }
